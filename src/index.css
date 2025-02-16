@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lava+Pro+Grunge&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mano+Negra:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(140, 82, 255, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(140, 82, 255, 0.4); }
+  100% { box-shadow: 0 0 5px rgba(140, 82, 255, 0.2); }
+}
+
+/* Base Styles */
+.font-lavaProGrunge {
+  font-family: 'Lava Pro Grunge';
+}
+
+.font-wcManoNegraBold {
+  font-family: 'Mano Negra', bold;
+}
+
+.font-leagueSpartan {
+  font-family: 'League Spartan', sans-serif;
+}
+
+.bg-custom-indigo {
+  background-color: #8c52ff;
+}
+
+/* Enhanced Components */
+.hero-title {
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.process-icon {
+  animation: glow 3s infinite;
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.02);
+}
+
+/* Chart styles */
+.donut-chart {
+  width: 295px !important;
+  height: 295px !important;
+  transition: transform 0.3s ease;
+}
+
+.donut-chart:hover {
+  transform: scale(1.05);
+}
+
+/* Portfolio enhancements */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Contact form enhancements */
+.input-field {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.input-field:focus {
+  border-color: #8c52ff;
+  box-shadow: 0 0 0 2px rgba(140, 82, 255, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8c52ff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7442d3;
+}
